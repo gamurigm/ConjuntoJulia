@@ -48,8 +48,8 @@ namespace Fractales
             zoomBar.Value = 10;
             moveX = 0.0;
             moveY = 0.0;
-            cRe = 0.27015;
-            cIm = -0.7;
+            cRe = -0.7;
+            cIm =  0.27015;
             StartRendering();
         }
 

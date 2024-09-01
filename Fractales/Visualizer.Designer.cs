@@ -34,6 +34,9 @@
             this.grbControles = new System.Windows.Forms.GroupBox();
             this.zoomBar = new System.Windows.Forms.TrackBar();
             this.iterationsBar = new System.Windows.Forms.TrackBar();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.grbCanvas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCanvas)).BeginInit();
             this.grbControles.SuspendLayout();
@@ -78,10 +81,11 @@
             // grbControles
             // 
             this.grbControles.AccessibleDescription = "grbControles";
+            this.grbControles.Controls.Add(this.button1);
             this.grbControles.Controls.Add(this.BtnGraficar);
-            this.grbControles.Location = new System.Drawing.Point(33, 14);
+            this.grbControles.Location = new System.Drawing.Point(33, 51);
             this.grbControles.Name = "grbControles";
-            this.grbControles.Size = new System.Drawing.Size(94, 345);
+            this.grbControles.Size = new System.Drawing.Size(94, 387);
             this.grbControles.TabIndex = 0;
             this.grbControles.TabStop = false;
             this.grbControles.Text = "Controles";
@@ -106,11 +110,41 @@
             this.iterationsBar.TabIndex = 3;
             this.iterationsBar.Scroll += new System.EventHandler(this.iterationsBar_Scroll);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(50, 482);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(42, 16);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Zoom";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(50, 544);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 16);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Iteraciones";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(7, 140);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Reiniciar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.BtnReiniciar_Click);
+            // 
             // Visualizer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 609);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.iterationsBar);
             this.Controls.Add(this.zoomBar);
             this.Controls.Add(this.grbCanvas);
@@ -134,6 +168,9 @@
         private System.Windows.Forms.GroupBox grbControles;
         private System.Windows.Forms.TrackBar zoomBar;
         private System.Windows.Forms.TrackBar iterationsBar;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
