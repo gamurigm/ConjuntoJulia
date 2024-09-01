@@ -14,7 +14,7 @@ namespace Fractales
         private double moveY = 0.0;
         private double cRe = -0.7;
         private double cIm = 0.27015;
-        private const double moveStep = 0.04;
+        private const double moveStep = 0.01;
         private BackgroundWorker renderWorker;
 
         public Visualizer()

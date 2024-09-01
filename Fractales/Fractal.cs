@@ -45,7 +45,7 @@ namespace Fractales
         private Color GetColor(int iteration, int maxIteration)
         {
             double t = (double)iteration / maxIteration;
-            int r = (int)(9 * (1 - t) * t * t * t * 255);
+            int r = (int)(8 * (1 - t) * t * t * t * 255);
             int g = (int)(15 * (1 - t) * (1 - t) * t * t * 255);
             int b = (int)(8.5 * (1 - t) * (1 - t) * (1 - t) * t * 255);
             return Color.FromArgb(r, g, b);

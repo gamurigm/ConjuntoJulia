@@ -32,11 +32,11 @@
             this.picCanvas = new System.Windows.Forms.PictureBox();
             this.BtnGraficar = new System.Windows.Forms.Button();
             this.grbControles = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.zoomBar = new System.Windows.Forms.TrackBar();
             this.iterationsBar = new System.Windows.Forms.TrackBar();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.grbCanvas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCanvas)).BeginInit();
             this.grbControles.SuspendLayout();
@@ -62,9 +62,9 @@
             this.picCanvas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.picCanvas.Location = new System.Drawing.Point(6, 36);
+            this.picCanvas.Location = new System.Drawing.Point(6, 21);
             this.picCanvas.Name = "picCanvas";
-            this.picCanvas.Size = new System.Drawing.Size(616, 387);
+            this.picCanvas.Size = new System.Drawing.Size(616, 402);
             this.picCanvas.TabIndex = 0;
             this.picCanvas.TabStop = false;
             // 
@@ -83,12 +83,22 @@
             this.grbControles.AccessibleDescription = "grbControles";
             this.grbControles.Controls.Add(this.button1);
             this.grbControles.Controls.Add(this.BtnGraficar);
-            this.grbControles.Location = new System.Drawing.Point(33, 51);
+            this.grbControles.Location = new System.Drawing.Point(29, 120);
             this.grbControles.Name = "grbControles";
-            this.grbControles.Size = new System.Drawing.Size(94, 387);
+            this.grbControles.Size = new System.Drawing.Size(94, 212);
             this.grbControles.TabIndex = 0;
             this.grbControles.TabStop = false;
             this.grbControles.Text = "Controles";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(7, 140);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Reiniciar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.BtnReiniciar_Click);
             // 
             // zoomBar
             // 
@@ -131,16 +141,6 @@
             this.label2.Size = new System.Drawing.Size(73, 16);
             this.label2.TabIndex = 5;
             this.label2.Text = "Iteraciones";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(7, 140);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Reiniciar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.BtnReiniciar_Click);
             // 
             // Visualizer
             // 
