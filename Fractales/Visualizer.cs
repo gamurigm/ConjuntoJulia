@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using System.ComponentModel;  // Para BackgroundWorker
+using System.ComponentModel;  
 
 namespace Fractales
 {
@@ -32,7 +32,7 @@ namespace Fractales
             renderWorker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(OnRenderCompleted);
 
             iterationsBar.Minimum = 100;
-            iterationsBar.Maximum = 50000;
+            iterationsBar.Maximum = 5000;
             iterationsBar.Value = 250; 
             iterationsBar.Scroll += new EventHandler(iterationsBar_Scroll);
         }
@@ -46,6 +46,7 @@ namespace Fractales
         {
             zoom = 1.0;
             zoomBar.Value = 10;
+            iterationsBar.Value = 300;
             moveX = 0.0;
             moveY = 0.0;
             cRe = -0.7;

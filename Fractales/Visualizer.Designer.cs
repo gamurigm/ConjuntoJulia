@@ -95,19 +95,23 @@
             this.zoomBar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.zoomBar.Location = new System.Drawing.Point(140, 463);
             this.zoomBar.Maximum = 100;
+            this.zoomBar.Minimum = 1;
             this.zoomBar.Name = "zoomBar";
             this.zoomBar.Size = new System.Drawing.Size(628, 64);
             this.zoomBar.TabIndex = 2;
+            this.zoomBar.Value = 1;
             this.zoomBar.Scroll += new System.EventHandler(this.zoomBar_Scroll);
             // 
             // iterationsBar
             // 
             this.iterationsBar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.iterationsBar.Location = new System.Drawing.Point(146, 533);
-            this.iterationsBar.Maximum = 100;
+            this.iterationsBar.Maximum = 5000;
+            this.iterationsBar.Minimum = 100;
             this.iterationsBar.Name = "iterationsBar";
             this.iterationsBar.Size = new System.Drawing.Size(628, 64);
             this.iterationsBar.TabIndex = 3;
+            this.iterationsBar.Value = 100;
             this.iterationsBar.Scroll += new System.EventHandler(this.iterationsBar_Scroll);
             // 
             // label1
