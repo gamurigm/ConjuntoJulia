@@ -1,0 +1,10 @@
+C:\Users\gamur\source\repos\Fractales\Fractales\bin\Debug\Fractales.exe.config
+C:\Users\gamur\source\repos\Fractales\Fractales\bin\Debug\Fractales.exe
+C:\Users\gamur\source\repos\Fractales\Fractales\bin\Debug\Fractales.pdb
+C:\Users\gamur\source\repos\Fractales\Fractales\obj\Debug\Fractales.csproj.AssemblyReference.cache
+C:\Users\gamur\source\repos\Fractales\Fractales\obj\Debug\Fractales.Properties.Resources.resources
+C:\Users\gamur\source\repos\Fractales\Fractales\obj\Debug\Fractales.Visualizer.resources
+C:\Users\gamur\source\repos\Fractales\Fractales\obj\Debug\Fractales.csproj.GenerateResource.cache
+C:\Users\gamur\source\repos\Fractales\Fractales\obj\Debug\Fractales.csproj.CoreCompileInputs.cache
+C:\Users\gamur\source\repos\Fractales\Fractales\obj\Debug\Fractales.exe
+C:\Users\gamur\source\repos\Fractales\Fractales\obj\Debug\Fractales.pdb

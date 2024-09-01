@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fractales", "Fractales\Fractales.csproj", "{ADBADD16-6F6D-4AD7-9AAA-7DDACE5E91A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADBADD16-6F6D-4AD7-9AAA-7DDACE5E91A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADBADD16-6F6D-4AD7-9AAA-7DDACE5E91A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADBADD16-6F6D-4AD7-9AAA-7DDACE5E91A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADBADD16-6F6D-4AD7-9AAA-7DDACE5E91A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D7BF22A9-0CB3-43CE-99DA-FB54E1CE9C96}
+	EndGlobalSection
+EndGlobal
