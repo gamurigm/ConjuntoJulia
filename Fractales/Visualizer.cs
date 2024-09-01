@@ -7,6 +7,7 @@ namespace Fractales
     public partial class Visualizer : Form
     {
         private Fractal fractal;
+        private Bitmap fractalBitmap;
         private double zoom = 1.0;
         private double moveX = 0.0;
         private double moveY = 0.0;
@@ -18,17 +19,10 @@ namespace Fractales
         {
             InitializeComponent();
             fractal = new Fractal();
-
-            if (zoomBar != null)
-            {
-                zoomBar.Minimum = 10;
-                zoomBar.Maximum = 100;
-                zoomBar.Value = 12;
-            }
-
             this.KeyPreview = true;
             this.KeyDown += new KeyEventHandler(OnKeyDown);
             this.Resize += new EventHandler(this.OnResize);
+            picCanvas.Paint += new PaintEventHandler(OnPaint);
         }
 
         private void BtnGraficar_Click(object sender, EventArgs e)
@@ -44,12 +38,9 @@ namespace Fractales
 
         private void OnResize(object sender, EventArgs e)
         {
-            if (picCanvas.Width != this.ClientSize.Width || picCanvas.Height != this.ClientSize.Height)
-            {
-                picCanvas.Width = this.ClientSize.Width;
-                picCanvas.Height = this.ClientSize.Height;
-                DrawJuliaSet();
-            }
+            picCanvas.Width = this.ClientSize.Width;
+            picCanvas.Height = this.ClientSize.Height;
+            DrawJuliaSet();
         }
 
         private void OnKeyDown(object sender, KeyEventArgs e)
@@ -57,26 +48,37 @@ namespace Fractales
             switch (e.KeyCode)
             {
                 case Keys.W:
-                    moveY -= moveStep;
+                    moveY -= moveStep / zoom;
                     break;
                 case Keys.S:
-                    moveY += moveStep;
+                    moveY += moveStep / zoom;
                     break;
                 case Keys.A:
-                    moveX -= moveStep;
+                    moveX -= moveStep / zoom;
                     break;
                 case Keys.D:
-                    moveX += moveStep;
+                    moveX += moveStep / zoom;
                     break;
             }
-            DrawJuliaSet();
+            picCanvas.Invalidate(); // Forzar redibujado del PictureBox
         }
 
         private void DrawJuliaSet()
         {
-            if (fractal != null && picCanvas != null && picCanvas.Width > 0 && picCanvas.Height > 0)
+            if (fractal != null)
             {
-                fractal.DrawJuliaSet(picCanvas, zoom, moveX, moveY, cRe, cIm);
+                // Generar el fractal en un bitmap más grande
+                fractalBitmap = fractal.GenerateJuliaSetBitmap(zoom, moveX, moveY, cRe, cIm, picCanvas.ClientSize);
+                picCanvas.Invalidate(); // Forzar redibujado del PictureBox
+            }
+        }
+
+        private void OnPaint(object sender, PaintEventArgs e)
+        {
+            if (fractalBitmap != null)
+            {
+                // Dibujar una porción del bitmap en el PictureBox
+                e.Graphics.DrawImage(fractalBitmap, 0, 0, picCanvas.ClientSize.Width, picCanvas.ClientSize.Height);
             }
         }
     }

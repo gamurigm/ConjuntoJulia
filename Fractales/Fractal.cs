@@ -1,19 +1,16 @@
 ﻿using System;
 using System.Drawing;
-using System.Windows.Forms;
 
 namespace Fractales
 {
     internal class Fractal
     {
-        
-        public Fractal() {}
-
-        public void DrawJuliaSet(PictureBox picCanvas, double zoom, double moveX, double moveY, double cRe, double cIm)
+        public Bitmap GenerateJuliaSetBitmap(double zoom, double moveX, double moveY, double cRe, double cIm, Size size)
         {
-            int width = picCanvas.Width;
-            int height = picCanvas.Height;
-            Bitmap bmp = new Bitmap(width, height);
+            int width = size.Width * 2;  // Aumentar el tamaño para permitir el desplazamiento
+            int height = size.Height * 2;
+
+            Bitmap bitmap = new Bitmap(width, height);
 
             for (int x = 0; x < width; x++)
             {
@@ -32,16 +29,13 @@ namespace Fractales
                         iteration++;
                     }
 
-                    // Calcular el color basado en el número de iteraciones
-                    Color color = GetColor(iteration); // Método que defines para calcular el color
-                    bmp.SetPixel(x, y, color);
+                    Color color = GetColor(iteration);
+                    bitmap.SetPixel(x, y, color);
                 }
             }
 
-            picCanvas.Image?.Dispose(); // Liberar la imagen anterior para evitar fugas de memoria
-            picCanvas.Image = bmp;
+            return bitmap;
         }
-
 
         private Color GetColor(int iteration)
         {

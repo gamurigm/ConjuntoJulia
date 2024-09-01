@@ -106,6 +106,7 @@
             this.Controls.Add(this.grbControles);
             this.Name = "Visualizer";
             this.Text = "JuliaSet Visualizer";
+            this.Load += new System.EventHandler(this.Visualizer_Load);
             this.grbCanvas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picCanvas)).EndInit();
             this.grbControles.ResumeLayout(false);
