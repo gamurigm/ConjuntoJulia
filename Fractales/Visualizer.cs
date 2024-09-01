@@ -39,7 +39,6 @@ namespace Fractales
 
         private void BtnGraficar_Click(object sender, EventArgs e)
         {
-            // Capturar los valores de cRe y cIm desde los TextBox
             if (double.TryParse(txtCRe.Text, out double parsedCRe))
             {
                 cRe = parsedCRe;
