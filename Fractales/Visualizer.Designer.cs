@@ -50,9 +50,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grbCanvas.Controls.Add(this.picCanvas);
-            this.grbCanvas.Location = new System.Drawing.Point(146, 15);
+            this.grbCanvas.Location = new System.Drawing.Point(140, 15);
             this.grbCanvas.Name = "grbCanvas";
-            this.grbCanvas.Size = new System.Drawing.Size(628, 429);
+            this.grbCanvas.Size = new System.Drawing.Size(634, 429);
             this.grbCanvas.TabIndex = 1;
             this.grbCanvas.TabStop = false;
             this.grbCanvas.Text = "Canvas";
@@ -64,13 +64,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.picCanvas.Location = new System.Drawing.Point(6, 21);
             this.picCanvas.Name = "picCanvas";
-            this.picCanvas.Size = new System.Drawing.Size(616, 402);
+            this.picCanvas.Size = new System.Drawing.Size(622, 402);
             this.picCanvas.TabIndex = 0;
             this.picCanvas.TabStop = false;
             // 
             // BtnGraficar
             // 
-            this.BtnGraficar.Location = new System.Drawing.Point(7, 64);
+            this.BtnGraficar.Location = new System.Drawing.Point(15, 41);
             this.BtnGraficar.Name = "BtnGraficar";
             this.BtnGraficar.Size = new System.Drawing.Size(75, 23);
             this.BtnGraficar.TabIndex = 0;
@@ -83,16 +83,16 @@
             this.grbControles.AccessibleDescription = "grbControles";
             this.grbControles.Controls.Add(this.button1);
             this.grbControles.Controls.Add(this.BtnGraficar);
-            this.grbControles.Location = new System.Drawing.Point(29, 120);
+            this.grbControles.Location = new System.Drawing.Point(12, 166);
             this.grbControles.Name = "grbControles";
-            this.grbControles.Size = new System.Drawing.Size(94, 212);
+            this.grbControles.Size = new System.Drawing.Size(111, 135);
             this.grbControles.TabIndex = 0;
             this.grbControles.TabStop = false;
             this.grbControles.Text = "Controles";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(7, 140);
+            this.button1.Location = new System.Drawing.Point(15, 81);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -110,7 +110,7 @@
             this.zoomBar.Size = new System.Drawing.Size(628, 64);
             this.zoomBar.TabIndex = 2;
             this.zoomBar.Value = 1;
-            this.zoomBar.Scroll += new System.EventHandler(this.zoomBar_Scroll);
+      
             // 
             // iterationsBar
             // 
@@ -155,6 +155,7 @@
             this.Controls.Add(this.grbControles);
             this.Name = "Visualizer";
             this.Text = "JuliaSet Visualizer";
+          
             this.grbCanvas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picCanvas)).EndInit();
             this.grbControles.ResumeLayout(false);

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using System.ComponentModel;  
+using System.ComponentModel;
 
 namespace Fractales
 {
@@ -24,16 +24,16 @@ namespace Fractales
             this.KeyPreview = true;
             this.KeyDown += new KeyEventHandler(OnPressKey);
             this.Resize += new EventHandler(OnResize);
+            this.MouseWheel += new MouseEventHandler(OnMouseWheel); // Evento para la rueda del mouse
             picCanvas.Paint += new PaintEventHandler(OnPaint);
 
-            // Inicializar BackgroundWorker
             renderWorker = new BackgroundWorker();
             renderWorker.DoWork += new DoWorkEventHandler(RenderFractal);
             renderWorker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(OnRenderCompleted);
 
             iterationsBar.Minimum = 100;
             iterationsBar.Maximum = 5000;
-            iterationsBar.Value = 250; 
+            iterationsBar.Value = 250;
             iterationsBar.Scroll += new EventHandler(iterationsBar_Scroll);
         }
 
@@ -50,18 +50,12 @@ namespace Fractales
             moveX = 0.0;
             moveY = 0.0;
             cRe = -0.7;
-            cIm =  0.27015;
+            cIm = 0.27015;
             StartRendering();
         }
 
         private void iterationsBar_Scroll(object sender, EventArgs e)
         {
-            StartRendering();
-        }
-
-        private void zoomBar_Scroll(object sender, EventArgs e)
-        {
-            zoom = Math.Pow(2, zoomBar.Value / 10.0);
             StartRendering();
         }
 
@@ -88,6 +82,19 @@ namespace Fractales
                 case Keys.D:
                     moveX += moveStep;
                     break;
+            }
+            StartRendering();
+        }
+
+        private void OnMouseWheel(object sender, MouseEventArgs e)
+        {
+            if (e.Delta > 0)
+            {
+                zoom *= 1.1; // Aumenta el zoom
+            }
+            else if (e.Delta < 0)
+            {
+                zoom /= 1.1; // Disminuye el zoom
             }
             StartRendering();
         }
@@ -129,7 +136,5 @@ namespace Fractales
                 }
             }
         }
-
-       
     }
 }

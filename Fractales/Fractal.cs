@@ -41,7 +41,6 @@ namespace Fractales
             return bitmap;
         }
 
-
         private Color GetColor(int iteration, int maxIteration)
         {
             double t = (double)iteration / maxIteration;
