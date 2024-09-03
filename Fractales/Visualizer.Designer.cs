@@ -37,6 +37,10 @@
             this.iterationsBar = new System.Windows.Forms.TrackBar();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtCRe = new System.Windows.Forms.TextBox();
+            this.txtCIm = new System.Windows.Forms.TextBox();
             this.grbCanvas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCanvas)).BeginInit();
             this.grbControles.SuspendLayout();
@@ -70,7 +74,7 @@
             // 
             // BtnGraficar
             // 
-            this.BtnGraficar.Location = new System.Drawing.Point(15, 41);
+            this.BtnGraficar.Location = new System.Drawing.Point(16, 162);
             this.BtnGraficar.Name = "BtnGraficar";
             this.BtnGraficar.Size = new System.Drawing.Size(75, 23);
             this.BtnGraficar.TabIndex = 0;
@@ -81,18 +85,21 @@
             // grbControles
             // 
             this.grbControles.AccessibleDescription = "grbControles";
+            this.grbControles.Controls.Add(this.txtCIm);
+            this.grbControles.Controls.Add(this.txtCRe);
+            this.grbControles.Controls.Add(this.label4);
+            this.grbControles.Controls.Add(this.label3);
             this.grbControles.Controls.Add(this.button1);
             this.grbControles.Controls.Add(this.BtnGraficar);
-            this.grbControles.Location = new System.Drawing.Point(12, 166);
+            this.grbControles.Location = new System.Drawing.Point(23, 101);
             this.grbControles.Name = "grbControles";
-            this.grbControles.Size = new System.Drawing.Size(111, 135);
+            this.grbControles.Size = new System.Drawing.Size(111, 271);
             this.grbControles.TabIndex = 0;
             this.grbControles.TabStop = false;
-            this.grbControles.Text = "Controles";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(15, 81);
+            this.button1.Location = new System.Drawing.Point(16, 204);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -110,7 +117,6 @@
             this.zoomBar.Size = new System.Drawing.Size(628, 64);
             this.zoomBar.TabIndex = 2;
             this.zoomBar.Value = 1;
-      
             // 
             // iterationsBar
             // 
@@ -142,6 +148,38 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Iteraciones";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(13, 23);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 16);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "cRe:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(13, 79);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(31, 16);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "cIm:";
+            // 
+            // txtCRe
+            // 
+            this.txtCRe.Location = new System.Drawing.Point(25, 42);
+            this.txtCRe.Name = "txtCRe";
+            this.txtCRe.Size = new System.Drawing.Size(70, 22);
+            this.txtCRe.TabIndex = 4;
+            // 
+            // txtCIm
+            // 
+            this.txtCIm.Location = new System.Drawing.Point(25, 98);
+            this.txtCIm.Name = "txtCIm";
+            this.txtCIm.Size = new System.Drawing.Size(70, 22);
+            this.txtCIm.TabIndex = 5;
+            // 
             // Visualizer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -155,10 +193,10 @@
             this.Controls.Add(this.grbControles);
             this.Name = "Visualizer";
             this.Text = "JuliaSet Visualizer";
-          
             this.grbCanvas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picCanvas)).EndInit();
             this.grbControles.ResumeLayout(false);
+            this.grbControles.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.zoomBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iterationsBar)).EndInit();
             this.ResumeLayout(false);
@@ -176,6 +214,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtCIm;
+        private System.Windows.Forms.TextBox txtCRe;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }
 

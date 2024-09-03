@@ -39,6 +39,27 @@ namespace Fractales
 
         private void BtnGraficar_Click(object sender, EventArgs e)
         {
+            // Capturar los valores de cRe y cIm desde los TextBox
+            if (double.TryParse(txtCRe.Text, out double parsedCRe))
+            {
+                cRe = parsedCRe;
+            }
+            else
+            {
+                MessageBox.Show("Por favor, ingrese un valor válido para cRe.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (double.TryParse(txtCIm.Text, out double parsedCIm))
+            {
+                cIm = parsedCIm;
+            }
+            else
+            {
+                MessageBox.Show("Por favor, ingrese un valor válido para cIm.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             StartRendering();
         }
 
